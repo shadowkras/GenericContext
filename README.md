@@ -34,4 +34,4 @@ public class MyEntityMapping : IEntityTypeConfiguration<MyEntity>
 }
 ```
 
-This pattern replaces using a single mapping class, as seen on the [official documentation](https://docs.microsoft.com/en-us/ef/core/modeling/relational/columns).
+This pattern replaces using Data Annotations or Fluent Api patterns, as seen on the [official documentation](https://docs.microsoft.com/en-us/ef/core/modeling/relational/columns).
