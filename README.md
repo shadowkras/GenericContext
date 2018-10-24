@@ -7,8 +7,12 @@ By default, it disables the entity attachment from your database, which can be c
 
 To implement this is simple, create a DbContext class, and instead of inheriting from Microsoft.EntityFrameworkCore.DbContext, inherit from this project GenericContext class, you must pass the specific DbContext type on it's inheritance, following the example:
 
+```
 public class MyContext : GenericContext<MyContext>
+```
 
 The GenericRepository and GenericUnitofWork simply must inherit those classes and you will have all their methods available, as the example:
 
- public class MyRepository<TEntity> : GenericRepository<TEntity, MyContext>
+```
+public class MyRepository<TEntity> : GenericRepository<TEntity, MyContext>
+```
