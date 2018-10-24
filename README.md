@@ -11,6 +11,8 @@ To implement this is simple, create a DbContext class, and instead of inheriting
 public class MyContext : GenericContext<MyContext>
 ```
 
+This context will have to implement the DatabaseConfig method, which tells your context how to connect to your database, just like you would have to do by overloading the OnConfiguring method from Microsoft.EntityFrameworkCore.DbContext.
+
 The GenericRepository and GenericUnitofWork simply must inherit those classes and you will have all their methods available, as the example:
 
 ```
@@ -22,3 +24,14 @@ public MyRepository(MyContext dbContext)
     _dbContext = dbContext ?? throw new ArgumentNullException("dbContext");
 }
 ```
+This project also uses a pattern where each entity's may do its own mapping, done using a method called **Configure**, as the example:
+
+```
+public class MyEntityMapping : IEntityTypeConfiguration<MyEntity>
+{
+  public void Configure(EntityTypeBuilder<MyEntity> builder)
+  { //mapping implementation }
+}
+```
+
+This pattern replaces using a single mapping class, as seen on the [official documentation](https://docs.microsoft.com/en-us/ef/core/modeling/relational/columns).
