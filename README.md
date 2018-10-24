@@ -15,4 +15,10 @@ The GenericRepository and GenericUnitofWork simply must inherit those classes an
 
 ```
 public class MyRepository<TEntity> : GenericRepository<TEntity, MyContext>
+
+public MyRepository(MyContext dbContext)
+  : base(dbContext as GenericContext<MyContext>)
+{
+    _dbContext = dbContext ?? throw new ArgumentNullException("dbContext");
+}
 ```
