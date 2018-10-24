@@ -103,7 +103,7 @@ namespace GenericContext.Context
 
             #endregion
 
-            #region Método Genérico ModelBuilder
+            #region Generic model building
 
             // Interface of our entities.
             var mappingInterface = typeof(IEntityTypeConfiguration<>);
