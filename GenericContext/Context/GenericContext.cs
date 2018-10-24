@@ -9,16 +9,15 @@ namespace GenericContext.Context
     /// <summary>
     /// Generic DbContext to implement standard methods.
     /// </summary>
-    /// <typeparam name="TContext"></typeparam>
+    /// <typeparam name="TContext">Context type.</typeparam>
     public abstract class GenericContext<TContext> : DbContext
     {
-
         #region Abstract methods
 
         #region Database configuration
 
         /// <summary>
-        /// Virtual method to configure the database conection.
+        /// Abstract method to configure implement our database connection.
         /// <para>Example:</para>
         /// <para>optionsBuilder.UseSqlServer(connectionString);</para>
         /// </summary>
@@ -52,7 +51,6 @@ namespace GenericContext.Context
         /// Virtual method to handle exceptions on our context.
         /// <para>Examples:</para>
         /// <para>Logger.Log(ex);</para>
-        /// <para>Logger.Log(new ExceptionLog(ex));</para>
         /// </summary>
         /// <param name="ex">Exception class.</param>
         public virtual void SaveException(Exception ex)
