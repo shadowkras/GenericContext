@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 
-namespace GenericContext.Extensoes
+namespace GenericContext.Extensions
 {
     internal static class TEntityExtensions
     {

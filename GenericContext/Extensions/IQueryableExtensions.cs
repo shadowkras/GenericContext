@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace GenericContext.Extensoes
+namespace GenericContext.Extensions
 {
     public static class IQueryableExtensions
     {

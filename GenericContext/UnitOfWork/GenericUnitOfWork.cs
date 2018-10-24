@@ -1,5 +1,5 @@
 ﻿using GenericContext.Context;
-using GenericContext.Extensoes;
+using GenericContext.Extensions;
 using GenericContext.Interfaces;
 using GenericContext.Resources;
 using Microsoft.EntityFrameworkCore;

@@ -1,6 +1,6 @@
 using System;
 
-namespace GenericContext.Extensoes
+namespace GenericContext.Extensions
 {
     public static class ExceptionExtensions
     {
