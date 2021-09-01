@@ -7,6 +7,7 @@
     <PackageProjectUrl>https://github.com/shadowkras/GenericContext</PackageProjectUrl>
     <RepositoryUrl>https://github.com/shadowkras/GenericContext</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
